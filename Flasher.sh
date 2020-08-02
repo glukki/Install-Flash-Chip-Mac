@@ -151,17 +151,14 @@ echo " Then press enter please "
 read flavour
 
 if [ -d Chip-tools-Mac ]; then
- cd Chip-tools-Mac
- git pull
- chmod +x *.sh
- FEL='sudo sunxi-fel' FASTBOOT='sudo fastboot' SNIB=false ./chip-update-firmware.sh -$flavour
- elif [ ! -d Chip-tools-Mac ]; then
- git clone https://github.com/Thore-Krug/Chip-tools-Mac.git
- cd  Chip-tools-Mac
- chmod +x *.sh
- FEL='sudo sunxi-fel' FASTBOOT='sudo fastboot' SNIB=false ./chip-update-firmware.sh -$flavour
+  cd Chip-tools-Mac
+  git pull --rebase --autostash
+elif [ ! -d Chip-tools-Mac ]; then
+  install-chip-tools
+  cd Chip-tools-Mac
 fi
 
+FEL='sudo sunxi-fel' FASTBOOT='sudo fastboot' SNIB=false ./chip-update-firmware.sh -$flavour
 
 }
 

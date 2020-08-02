@@ -9,6 +9,9 @@ function install-brew {
   brew install bash wget curl screen u-boot-tools libusb zlib pkg-config git
 
   brew install homebrew/cask/android-platform-tools
+
+  brew tap ArmMbed/homebrew-formulae
+  brew install arm-none-eabi-gcc
 }
 
 #Install the C.H.I.P Tools ported for MacOS

@@ -21,7 +21,6 @@
 4. On the Mac:
     - run ` git clone https://github.com/Thore-Krug/Install-Flash-Chip-Mac` to clone this repository. ( Or use Github Desktop )
     - `cd` into the location where you stored this repository.
-    - run `sudo chmod +x Flasher.sh`
     - `./Flasher.sh help` will give out the help
     - `./Flasher.sh install-all` install all the things you need to Flash your C.H.I.P
     - `./Flasher.sh flash` Will Flash your C.H.I.P

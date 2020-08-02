@@ -17,11 +17,8 @@ function install-brew {
 #Install the C.H.I.P Tools ported for MacOS
 function install-chip-tools {
 
-  git clone https://github.com/Thore-Krug/Chip-tools-Mac.git
+  git clone https://github.com/glukki/Chip-tools-Mac.git
 
-  cd Chip-tools-Mac
-
-  chmod +x *.sh
 }
 
 #Install the Sunxi-Tools into your Path
